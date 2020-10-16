@@ -8,8 +8,7 @@ package chatapplication_server.components.ClientSocketEngine;
 import SocketActionMessages.ChatMessage;
 import chatapplication_server.ComponentManager;
 import chatapplication_server.components.ConfigManager;
-import chatapplication_server.components.ServerSocketEngine.SocketServerEngine;
-import chatapplication_server.components.ServerSocketEngine.SocketServerGUI;
+import chatapplication_server.components.DHKey;
 import chatapplication_server.components.base.GenericThreadedComponent;
 import chatapplication_server.exception.ComponentInitException;
 import chatapplication_server.statistics.ServerStatistics;
@@ -18,7 +17,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import java.net.*;
-import java.util.Scanner;
 
 /**
  *
@@ -37,7 +35,13 @@ public class ClientEngine extends GenericThreadedComponent
     
     /** The Socket connection to the Chat Application Server */
     private Socket socket;
-    
+
+    public DHKey getDhKey() {
+        return dhKey;
+    }
+
+    /*perons shit*/
+    private DHKey dhKey;
     /** Socket Stream reader/writer that will be used throughout the whole connection... */
     private ObjectOutputStream socketWriter;
     private ObjectInputStream socketReader;
@@ -52,6 +56,7 @@ public class ClientEngine extends GenericThreadedComponent
      */
     public ClientEngine() {
         isRunning = false;
+        dhKey =new DHKey();
     }
     
     /**
@@ -71,15 +76,16 @@ public class ClientEngine extends GenericThreadedComponent
      * This method is called upon initialize of the ClientEngine component and handles any configuration that needs to be
      * done in the client before it connects to the Chat Application Server.
      * 
-     * @see IComponent interface.
      */
     public void initialize() throws ComponentInitException
     {
+        System.out.println("Messi initialize Client engine");
         /** Get the running instance of the Configuration Manager component */
         configManager = ConfigManager.getInstance();
                 
         /** For printing the configuration properties of the secure socket server */
         lotusStat = new ServerStatistics();
+        dhKey.generateKeys();
         
         /** Try and connect to the server... */
         try
@@ -116,6 +122,10 @@ public class ClientEngine extends GenericThreadedComponent
         try
         {
             socketWriter.writeObject( configManager.getValue( "Client.Username" ) );
+            System.out.println("dhKey.getPublicKey(): "+ dhKey.getPublicKey().toString());
+
+            sendMessage(new ChatMessage(ChatMessage.PUBLICKEY,  dhKey.getPublicKeyString()));
+
         }
         catch ( IOException ioe )
         {
@@ -137,7 +147,7 @@ public class ClientEngine extends GenericThreadedComponent
         ClientSocketGUI.getInstance().append( msg );
     }
     
-    /**
+    /** Shit here
      * Method for sending a message to the server
      * 
      * @param msg The message to be sent
@@ -175,6 +185,9 @@ public class ClientEngine extends GenericThreadedComponent
             // read message from user
             //String msg = scan.nextLine();
             String msg = ClientSocketGUI.getInstance().getPublicMsgToBeSent();
+            System.out.println("Messi Client engine");
+            System.out.println("New message "+ msg);
+
             if ( msg.equals( "" ) )
                 continue;
                 
