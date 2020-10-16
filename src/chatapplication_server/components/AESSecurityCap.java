@@ -1,9 +1,12 @@
+package chatapplication_server.components;
+
 import java.util.Base64;
 
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.IOException;
 import java.security.*;
+
 
 public class AESSecurityCap {
 

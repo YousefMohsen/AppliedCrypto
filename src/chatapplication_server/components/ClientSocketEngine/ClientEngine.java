@@ -8,6 +8,7 @@ package chatapplication_server.components.ClientSocketEngine;
 import SocketActionMessages.ChatMessage;
 import chatapplication_server.ComponentManager;
 import chatapplication_server.components.ConfigManager;
+import chatapplication_server.components.Node;
 import chatapplication_server.components.ServerSocketEngine.SocketServerEngine;
 import chatapplication_server.components.ServerSocketEngine.SocketServerGUI;
 import chatapplication_server.components.base.GenericThreadedComponent;
@@ -41,6 +42,8 @@ public class ClientEngine extends GenericThreadedComponent
     /** Socket Stream reader/writer that will be used throughout the whole connection... */
     private ObjectOutputStream socketWriter;
     private ObjectInputStream socketReader;
+
+    Node clientNode;
     
     /**
      * Singleton instance of the SocketServerEngine component
@@ -114,7 +117,9 @@ public class ClientEngine extends GenericThreadedComponent
         /** Send our username to the server... */
         try
         {
+            System.out.println(clientNode.getPublickey());
             socketWriter.writeObject( configManager.getValue( "Client.Username" ) );
+
         }
         catch ( Exception ioe )
         {
@@ -122,6 +127,8 @@ public class ClientEngine extends GenericThreadedComponent
             shutdown();
             ComponentManager.getInstance().fatalException(ioe);
         }
+
+        this.clientNode = new Node();
         
         super.initialize();
     }
