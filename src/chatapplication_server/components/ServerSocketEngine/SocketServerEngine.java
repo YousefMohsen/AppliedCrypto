@@ -7,13 +7,14 @@ package chatapplication_server.components.ServerSocketEngine;
 
 import chatapplication_server.ComponentManager;
 import chatapplication_server.components.ConfigManager;
-import chatapplication_server.components.DHKey;
 import chatapplication_server.components.base.GenericThreadedComponent;
 import chatapplication_server.exception.ComponentInitException;
 import chatapplication_server.statistics.ServerStatistics;
 import java.net.ServerSocket;
-import java.security.PublicKey;
+import javax.net.ssl.SSLServerSocket;
+import javax.net.ssl.SSLSocket;
 import java.util.*;
+import java.io.*;
 import java.net.*;
 import java.text.SimpleDateFormat;
 
@@ -21,11 +22,8 @@ import java.text.SimpleDateFormat;
  *
  * @author atgianne
  */
-
 public class SocketServerEngine extends GenericThreadedComponent
 {
-
-    Map<String,DHKey> dhKeys = new HashMap<>();
     /** Instance of the ConfigManager component */
     ConfigManager configManager;
     
@@ -40,10 +38,8 @@ public class SocketServerEngine extends GenericThreadedComponent
 
     /** Vector holding the references to the connection handlers that are occupied by an established connection */
     Vector connHandlerOccp;
-
-
-
-    /**
+    
+     /**
      * Singleton instance of the SocketServerEngine component
      */
     private static SocketServerEngine componentInstance = null;
@@ -69,94 +65,7 @@ public class SocketServerEngine extends GenericThreadedComponent
         
         return componentInstance;
     }
-
-    public void receivePublicKeyFrom( String username, PublicKey pubKey)
-    {
-        System.out.println("pubKey"+pubKey);
-        DHKey newDHKey = new DHKey();
-        newDHKey.generateKeys();
-        newDHKey.receivePublicKeyFromString(pubKey);
-        newDHKey.generateCommonSecretKey();
-        String publicKeyString = newDHKey.getPublicKeyString();
-        System.out.println("!newDHKey.getSecretKey()"+newDHKey.getSecretKey());
-        dhKeys.put(username, newDHKey);
-
-
-        /**Send server public key to client*/
-        System.out.println("in sendPublicKeyToClient");
-
-        Vector occupance = new Vector();
-
-        /** Take a clone of the occupance pool in order not to block it for a long period of time and loose any new incomaing connections */
-        synchronized ( connHandlerOccp )
-        {
-            occupance = connHandlerOccp;
-        }
-        System.out.println("\n occupance.size() "+ occupance.size() );
-
-        /** If there is no established connection...print it to the logging stream */
-        if ( occupance.size() == 0 )
-        {
-            SocketServerGUI.getInstance().appendEvent("[SSEngine]:: There aren't any established client connections to the CA server (" + lotusStat.getCurrentDate() + ")\n" );
-            return;
-        }
-
-        /** Then, for each connection handler that is occupied..print some information */
-        for ( int i = 0; i < occupance.size(); i++ )
-        {
-            System.out.println("in sendPublicKeyToClient");
-
-            /** Get a Connection Handler reference... */
-            SocketConnectionHandler sch = ( SocketConnectionHandler )occupance.get( i );
-            if(sch.getUserName().equals(  username )){
-                sch.writeMsg( "&PUBLICKEY&"+publicKeyString );
-            }
-
-
-        }
-
-
-
-    }
-
-    public void sendPublicKeyToClient(String username , String publicKey){
-        System.out.println("in sendPublicKeyToClient");
-
-        Vector occupance = new Vector();
-
-        /** Take a clone of the occupance pool in order not to block it for a long period of time and loose any new incomaing connections */
-        synchronized ( connHandlerOccp )
-        {
-            occupance = connHandlerOccp;
-        }
-
-        /** If there is no established connection...print it to the logging stream */
-        if ( occupance.size() == 0 )
-        {
-            SocketServerGUI.getInstance().appendEvent("[SSEngine]:: There aren't any established client connections to the CA server (" + lotusStat.getCurrentDate() + ")\n" );
-            return;
-        }
-
-        /** Then, for each connection handler that is occupied..print some information */
-        for ( int i = 0; i < occupance.size(); i++ )
-        {
-            System.out.println("in sendPublicKeyToClient");
-
-            /** Get a Connection Handler reference... */
-            SocketConnectionHandler sch = ( SocketConnectionHandler )occupance.get( i );
-            if(sch.getUserName().equals(  username )){
-                System.out.println("sendPublicKeyToClient -  sch.getUserName().equals(  username ): "+username);
-                sch.writeMsg( "&PUBLICKEY&"+publicKey );
-            }
-
-
-        }
-
-
-
-    }
-
-
+    
     /**
      * Method for printing some information about the established (if any) socket connections to the CA socket server.
      * Actually, it checks the occupance pool to see how many connection handlers are assigned to sockets and then
@@ -201,6 +110,7 @@ public class SocketServerEngine extends GenericThreadedComponent
      *
      * Also, it starts the socket server.
      * 
+     * @see IComponent interface.
      */
     public void initialize() throws ComponentInitException
     {
@@ -216,9 +126,6 @@ public class SocketServerEngine extends GenericThreadedComponent
         
         /** Set the default value of the number of SSLConnectionHandlers waiting in the connectionHandling pool */
         configManager.setDefaultValue( "ConnectionHandlers.Number", new Integer( 6 ).toString() );
-
-        /** Set server key */
-       // serverKey.generateKeys();
         
         /** Start the connection handlers and add them in the pool... */
         SocketServerGUI.getInstance().appendEvent("[SSEngine]:: ConnectionHandling Pool (" + configManager.getValue( "ConnectionHandlers.Number" ) + ") fired up (" + lotusStat.getCurrentDate() + ")\n" );
@@ -323,9 +230,6 @@ public class SocketServerEngine extends GenericThreadedComponent
      */
     public void addConnectionHandlerToPool( String handlerName )
     {
-        System.out.println("in addConnectionHandlerToPool shit: "+handlerName);
-
-
         /** Create a new Connection Handler... */
         SocketConnectionHandler handler = new SocketConnectionHandler();
 
@@ -340,8 +244,6 @@ public class SocketServerEngine extends GenericThreadedComponent
             /** Add him in the pool... */
             connectionHandlingPool.addElement( handler );
             SocketServerGUI.getInstance().appendEvent("[SSEngine]:: " + handler.getHandlerIdentifierName() + " terminated...New reference back in the pool (" + lotusStat.getCurrentDate() + ")\n" );
-
-
         }
     }
     
@@ -416,8 +318,6 @@ public class SocketServerEngine extends GenericThreadedComponent
     
     public void writeMsgSpecificClient( int PortNo, String msg )
     {
-        System.out.println("Messi.writeMsgSpecificClient"+msg);
-
         /** Vector that will temporarily hold a clone of the occupance pool... */
         Vector occupance = new Vector();
 
@@ -446,7 +346,7 @@ public class SocketServerEngine extends GenericThreadedComponent
         }
     }
     
-    /** shit here
+    /**
      * Method for broadcasting an event/message to all connected clients
      * 
      * @param message The message to be broadcasted
@@ -483,13 +383,8 @@ public class SocketServerEngine extends GenericThreadedComponent
         {
             /** Get a Connection Handler reference... */
             SocketConnectionHandler sch = ( SocketConnectionHandler )occupance.get( i );
-            System.out.println("messageLf"+messageLf);
-            System.out.println("bsocketengine. 115 - dhKey : "+ dhKeys.toString());
-            DHKey dhKey = dhKeys.get(sch.getUserName());
-            System.out.println("broadcast.dhKey : "+dhKey);
-         //   String encryptedMsg =Arrays.toString( dhKey.encryptMessage(messageLf));
-            String encryptedMsg = dhKey.encryptMessage(message);//Arrays.toString( );
-            sch.writeMsg( encryptedMsg );
+
+           sch.writeMsg( messageLf );
         }
     }
     

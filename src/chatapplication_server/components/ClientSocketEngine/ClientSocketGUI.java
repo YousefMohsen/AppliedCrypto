@@ -73,7 +73,7 @@ public class ClientSocketGUI extends JFrame implements IComponent, ActionListene
      */
     public ClientSocketGUI() {
         /** Title of the Server window */
-        super( "Crypto 💩" );
+        super( "Chat Client" );
     }
     
     /**
