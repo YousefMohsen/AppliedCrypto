@@ -110,7 +110,6 @@ public class SocketServerEngine extends GenericThreadedComponent
      *
      * Also, it starts the socket server.
      * 
-     * @see IComponent interface.
      */
     public void initialize() throws ComponentInitException
     {
