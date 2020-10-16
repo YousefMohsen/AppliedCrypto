@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4816afe4-4433-41ac-848a-1e8f2c2d7da4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/bcprov_jdk15on_166.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AppliedCrypto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AppliedCrypto.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chatapplication_server/components/ClientSocketEngine/ClientEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chatapplication_server/components/ClientSocketEngine/ClientEngine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,26 +26,17 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Unnamed" type="JarApplication" nameIsGenerated="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/dist/ChatApplication-Server.jar" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -59,6 +54,8 @@
       <updated>1602854401185</updated>
       <workItem from="1602854402265" duration="90000" />
       <workItem from="1602854505075" duration="347000" />
+      <workItem from="1602856883629" duration="286000" />
+      <workItem from="1602857435698" duration="26000" />
     </task>
     <servers />
   </component>
@@ -74,25 +71,25 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="424" y="213" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1440.-877.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1602854682238" />
-    <state width="1878" height="290" key="GridCell.Tab.0.bottom" timestamp="1602854852126">
+    <state width="1500" height="290" key="GridCell.Tab.0.bottom" timestamp="1602857301061">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="290" key="GridCell.Tab.0.bottom/-1440.-877.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1602854852126" />
-    <state width="1878" height="290" key="GridCell.Tab.0.center" timestamp="1602854852125">
+    <state width="1500" height="290" key="GridCell.Tab.0.bottom/-1440.-877.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1602857301061" />
+    <state width="1500" height="290" key="GridCell.Tab.0.center" timestamp="1602857301058">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="290" key="GridCell.Tab.0.center/-1440.-877.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1602854852125" />
-    <state width="1878" height="290" key="GridCell.Tab.0.left" timestamp="1602854852125">
+    <state width="1500" height="290" key="GridCell.Tab.0.center/-1440.-877.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1602857301058" />
+    <state width="1500" height="290" key="GridCell.Tab.0.left" timestamp="1602857301056">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="290" key="GridCell.Tab.0.left/-1440.-877.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1602854852125" />
-    <state width="1878" height="290" key="GridCell.Tab.0.right" timestamp="1602854852126">
+    <state width="1500" height="290" key="GridCell.Tab.0.left/-1440.-877.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1602857301056" />
+    <state width="1500" height="290" key="GridCell.Tab.0.right" timestamp="1602857301060">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1878" height="290" key="GridCell.Tab.0.right/-1440.-877.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1602854852126" />
-    <state x="598" y="82" key="SettingsEditor" timestamp="1602854558931">
+    <state width="1500" height="290" key="GridCell.Tab.0.right/-1440.-877.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1602857301060" />
+    <state x="598" y="82" key="SettingsEditor" timestamp="1602857445600">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="598" y="82" key="SettingsEditor/-1440.-877.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1602854558931" />
+    <state x="598" y="82" key="SettingsEditor/-1440.-877.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1602857445600" />
   </component>
 </project>

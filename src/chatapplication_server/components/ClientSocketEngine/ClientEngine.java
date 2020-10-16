@@ -20,12 +20,29 @@ import java.io.ObjectOutputStream;
 import java.net.*;
 import java.util.Scanner;
 
+import java.math.BigInteger;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.security.MessageDigest;
+import java.security.SecureRandom;
+import java.security.Security;
+
+import javax.crypto.KeyAgreement;
+import javax.crypto.spec.DHParameterSpec;
+
+import java.security.Security; 
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
 /**
  *
  * @author atgianne
  */
 public class ClientEngine extends GenericThreadedComponent 
 {
+
+    private static BigInteger g512 = new BigInteger("1234567890", 16);
+
+    private static BigInteger p512 = new BigInteger("1234567890", 16);
+
      /** Instance of the ConfigManager component */
     ConfigManager configManager;
     
@@ -114,9 +131,21 @@ public class ClientEngine extends GenericThreadedComponent
         /** Send our username to the server... */
         try
         {
+
+            Security.addProvider(new BouncyCastleProvider());
+
+            DHParameterSpec dhParams = new DHParameterSpec(p512, g512);
+
+            KeyPairGenerator keyGen = KeyPairGenerator.getInstance("DH", "BC");
+        
+            keyGen.initialize(dhParams, new SecureRandom());
+        
+            KeyAgreement aKeyAgree = KeyAgreement.getInstance("DH", "BC");
+            KeyPair aPair = keyGen.generateKeyPair();
+
             socketWriter.writeObject( configManager.getValue( "Client.Username" ) );
         }
-        catch ( IOException ioe )
+        catch ( Exception ioe )
         {
             display( "Exception during login: " + ioe );
             shutdown();

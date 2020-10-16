@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/Combii/Downloads/bcprov-jdk15on-166.jar"
+    ]
+}
