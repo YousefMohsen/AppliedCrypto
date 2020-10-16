@@ -110,14 +110,14 @@ public class ClientEngine extends GenericThreadedComponent
         }
         catch ( IOException ioe )
         {
-            display( "Exception creating new Input/Output Streams: " + ioe + "\n");
+            display( "ExcPUBLICKEYeption creating new Input/Output Streams: " + ioe + "\n");
             ComponentManager.getInstance().fatalException(ioe);
         }
         
         /** Send our username to the server... */
         try
         {
-            System.out.println(clientNode.getPublickey());
+            //System.out.println("PUBLICKEY: " + clientNode.getPublickey());
             socketWriter.writeObject( configManager.getValue( "Client.Username" ) );
 
         }
