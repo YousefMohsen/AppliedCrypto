@@ -8,6 +8,9 @@ package chatapplication_server.components.ClientSocketEngine;
 import SocketActionMessages.ChatMessage;
 import chatapplication_server.ComponentManager;
 import chatapplication_server.components.ConfigManager;
+import chatapplication_server.components.PrimeNumberGen;
+import chatapplication_server.components.PrimitiveRootGen;
+import chatapplication_server.components.SharedKeys;
 import chatapplication_server.components.ServerSocketEngine.SocketServerEngine;
 import chatapplication_server.components.ServerSocketEngine.SocketServerGUI;
 import chatapplication_server.components.base.GenericThreadedComponent;
@@ -16,7 +19,7 @@ import chatapplication_server.statistics.ServerStatistics;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-
+import java.math.BigInteger;
 import java.net.*;
 import java.util.Scanner;
 
@@ -26,6 +29,8 @@ import java.util.Scanner;
  */
 public class ClientEngine extends GenericThreadedComponent 
 {
+    Integer secretKey = 4;
+
      /** Instance of the ConfigManager component */
     ConfigManager configManager;
     
@@ -74,6 +79,8 @@ public class ClientEngine extends GenericThreadedComponent
      */
     public void initialize() throws ComponentInitException
     {
+
+
         /** Get the running instance of the Configuration Manager component */
         configManager = ConfigManager.getInstance();
                 
@@ -114,7 +121,11 @@ public class ClientEngine extends GenericThreadedComponent
         /** Send our username to the server... */
         try
         {
-            socketWriter.writeObject( configManager.getValue( "Client.Username" ) );
+
+            int Ya = (int) (Math.pow(SharedKeys.g, secretKey) % SharedKeys.p);
+            sendMessage(new ChatMessage(ChatMessage.PUBLICKEY, Ya + ""));
+
+            socketWriter.writeObject( configManager.getValue( "Client.Username " + secretKey ) );
         }
         catch ( IOException ioe )
         {
