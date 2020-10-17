@@ -323,10 +323,11 @@ public class SocketConnectionHandler implements Runnable
             try
             {  
                 /** Wait until there is something in the stream to be read... */
-                
+
                 cm = ( ChatMessage )socketReader.readObject();
 
                 String message = cm.getMessage();
+                System.out.print("SECRETKEYSHEREDSHITV2 " + message);
 
 
                 // Switch on the type of message receive
