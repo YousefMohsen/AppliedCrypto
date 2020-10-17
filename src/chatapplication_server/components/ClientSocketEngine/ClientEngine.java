@@ -123,8 +123,6 @@ public class ClientEngine extends GenericThreadedComponent
         /** Send our username to the server... */
         try
         {
-
-
             socketWriter.writeObject( configManager.getValue( "Client.Username") );
             sendMessage(new ChatMessage(ChatMessage.PUBLICKEY, keyStorage.calcPublicKey() + ""));
         }

@@ -386,8 +386,8 @@ public class SocketConnectionHandler implements Runnable {
                     case ChatMessage.PUBLICKEY:
                         int sharedSecretKeyServer = keyStorage.calcSecret(Integer.parseInt(message));
                         System.out.println("ChatMessage.PUBLICKEY!!!" + sharedSecretKeyServer);
-                        // System.out.print("SECRETKEYSHEREDSHIT: " + sharedSecretKeyServer);
 
+                        
                         break;
                 }
 
