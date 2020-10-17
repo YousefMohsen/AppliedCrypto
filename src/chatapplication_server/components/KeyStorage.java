@@ -19,10 +19,9 @@ public class KeyStorage {
          return this.sharedSecret = sharedSecret;
     }
 
-    public int calcSecret(int a,int b, int c) {
-        int sharedSecretKeyServer = (int) (Math.pow(Integer.parseInt(message), keyStorage.getOwnSecret()) % SharedKeys.p);
-
-        return this.sharedSecret = sharedSecret;
+    public int calcSecret(int receivedKey) {
+        this.sharedSecret = (int) (Math.pow(receivedKey, this.ownSecret) % SharedKeys.p);
+        return this.sharedSecret;
    }
 
 }
