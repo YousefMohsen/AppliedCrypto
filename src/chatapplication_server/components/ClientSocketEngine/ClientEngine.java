@@ -125,7 +125,7 @@ public class ClientEngine extends GenericThreadedComponent
             int Ya = (int) (Math.pow(SharedKeys.g, secretKey) % SharedKeys.p);
             sendMessage(new ChatMessage(ChatMessage.PUBLICKEY, Ya + ""));
 
-            socketWriter.writeObject( configManager.getValue( "Client.Username " + secretKey ) );
+            socketWriter.writeObject( configManager.getValue( "Client.Username") );
         }
         catch ( IOException ioe )
         {

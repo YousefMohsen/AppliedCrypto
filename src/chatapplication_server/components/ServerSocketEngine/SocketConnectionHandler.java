@@ -17,12 +17,17 @@ import javax.net.ssl.SSLSocket;
 import java.net.*;
 import java.util.Vector;
 
+import chatapplication_server.components.SharedKeys;
+
+
 /**
  *
  * @author atgianne
  */
 public class SocketConnectionHandler implements Runnable 
 {
+    Integer secretKey = 3;
+
      /** Did we receive a signal to shut down */
     protected boolean mustShutdown;
     
@@ -318,10 +323,12 @@ public class SocketConnectionHandler implements Runnable
             try
             {  
                 /** Wait until there is something in the stream to be read... */
+                
                 cm = ( ChatMessage )socketReader.readObject();
-                
+
                 String message = cm.getMessage();
-                
+
+
                 // Switch on the type of message receive
                 switch(cm.getType()) 
                 {
@@ -348,7 +355,13 @@ public class SocketConnectionHandler implements Runnable
 
                     System.out.println("At Server :  " +PortNo +temp[1]);
                     SocketServerEngine.getInstance().writeMsgSpecificClient(PortNo, Chat);
-                    break;              
+                    break;      
+                case ChatMessage.PUBLICKEY:
+                    int sharedSecretKeyServer = (int) (Math.pow(Integer.parseInt(message), secretKey) % SharedKeys.p);
+
+                    System.out.print("SECRETKEYSHEREDSHIT: " + sharedSecretKeyServer);
+
+                    break;            
 		}
                 
             }
