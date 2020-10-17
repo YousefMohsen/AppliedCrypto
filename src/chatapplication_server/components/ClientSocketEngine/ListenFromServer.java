@@ -26,8 +26,16 @@ public class ListenFromServer extends Thread
                     {
                         String msg = (String) sInput.readObject();
                     
-                        if(msg.contains( "#" ))
-                        {
+                        if (msg.contains("&PUBLicKey&")) {
+                            String pkString = msg.replaceFirst("&PUBLicKey&", "");
+                            System.out.println("pkString"+pkString);
+                            ClientEngine  clientEngine = ClientEngine.getInstance();
+                            clientEngine.keyStorage.calcSecret(Integer.parseInt(pkString));
+                            int sharedSecret =  clientEngine.keyStorage.getSharedSecret();
+                            System.out.println("client:sharedSecret"+sharedSecret);
+     
+    
+                        } else if (msg.contains("#")) {                        
                             ClientSocketGUI.getInstance().appendPrivateChat(msg + "\n");
                         }
                         else

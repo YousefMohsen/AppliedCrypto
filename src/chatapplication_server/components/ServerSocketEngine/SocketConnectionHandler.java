@@ -389,7 +389,7 @@ public class SocketConnectionHandler implements Runnable {
                         System.out.println("ChatMessage.PUBLICKEY!!!" + sharedSecretKeyServer);
                         int publicKey = keyStorage.calcPublicKey();
                     System.out.println("this.getHandleSocket().getPort()"+this.getHandleSocket().getPort());
-                        SocketServerEngine.getInstance().writeMsgSpecificClient( this.getHandleSocket().getPort() ,publicKey+"" );
+                        SocketServerEngine.getInstance().writeMsgSpecificClient( this.getHandleSocket().getPort() ,"&PUBLicKey&"+publicKey );
                         
                         break;
                 }
