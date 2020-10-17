@@ -358,9 +358,9 @@ public class SocketConnectionHandler implements Runnable
                     SocketServerEngine.getInstance().writeMsgSpecificClient(PortNo, Chat);
                     break;      
                 case ChatMessage.PUBLICKEY:
-                    int sharedSecretKeyServer = (int) (Math.pow(Integer.parseInt(message), secretKey) % SharedKeys.p);
-
-                    System.out.print("SECRETKEYSHEREDSHIT: " + sharedSecretKeyServer);
+                    //int sharedSecretKeyServer = (int) (Math.pow(Integer.parseInt(message), secretKey) % SharedKeys.p);
+System.out.println("ChatMessage.PUBLICKEY!!!"+ChatMessage.PUBLICKEY);
+                    //System.out.print("SECRETKEYSHEREDSHIT: " + sharedSecretKeyServer);
 
                     break;            
 		}
