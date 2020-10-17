@@ -7,6 +7,7 @@ package chatapplication_server.components.ServerSocketEngine;
 
 import SocketActionMessages.ChatMessage;
 import chatapplication_server.components.ConfigManager;
+import chatapplication_server.components.KeyStorage;
 import chatapplication_server.statistics.ServerStatistics;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -26,7 +27,8 @@ import chatapplication_server.components.SharedKeys;
  */
 public class SocketConnectionHandler implements Runnable 
 {
-    Integer secretKey = 3;
+    KeyStorage  keyStorage = new KeyStorage(3);
+
 
      /** Did we receive a signal to shut down */
     protected boolean mustShutdown;
@@ -327,7 +329,6 @@ public class SocketConnectionHandler implements Runnable
                 cm = ( ChatMessage )socketReader.readObject();
 
                 String message = cm.getMessage();
-                System.out.print("SECRETKEYSHEREDSHITV2 " + message);
 
 
                 // Switch on the type of message receive
@@ -358,8 +359,8 @@ public class SocketConnectionHandler implements Runnable
                     SocketServerEngine.getInstance().writeMsgSpecificClient(PortNo, Chat);
                     break;      
                 case ChatMessage.PUBLICKEY:
-                    //int sharedSecretKeyServer = (int) (Math.pow(Integer.parseInt(message), secretKey) % SharedKeys.p);
-System.out.println("ChatMessage.PUBLICKEY!!!"+ChatMessage.PUBLICKEY);
+                    int sharedSecretKeyServer = (int) (Math.pow(Integer.parseInt(message), keyStorage.getOwnSecret()) % SharedKeys.p);
+                    System.out.println("ChatMessage.PUBLICKEY!!!"+sharedSecretKeyServer);
                     //System.out.print("SECRETKEYSHEREDSHIT: " + sharedSecretKeyServer);
 
                     break;            

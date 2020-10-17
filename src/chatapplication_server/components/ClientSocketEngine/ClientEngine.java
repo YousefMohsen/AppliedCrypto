@@ -8,6 +8,7 @@ package chatapplication_server.components.ClientSocketEngine;
 import SocketActionMessages.ChatMessage;
 import chatapplication_server.ComponentManager;
 import chatapplication_server.components.ConfigManager;
+import chatapplication_server.components.KeyStorage;
 import chatapplication_server.components.PrimeNumberGen;
 import chatapplication_server.components.PrimitiveRootGen;
 import chatapplication_server.components.SharedKeys;
@@ -29,7 +30,8 @@ import java.util.Scanner;
  */
 public class ClientEngine extends GenericThreadedComponent 
 {
-    Integer secretKey = 4;
+    KeyStorage  keyStorage = new KeyStorage(4);
+    //Integer secretKey = 4;
 
      /** Instance of the ConfigManager component */
     ConfigManager configManager;
@@ -123,9 +125,8 @@ public class ClientEngine extends GenericThreadedComponent
         {
 
 
-
             socketWriter.writeObject( configManager.getValue( "Client.Username") );
-            int Ya = (int) (Math.pow(SharedKeys.g, secretKey) % SharedKeys.p);
+            int Ya = (int) (Math.pow(SharedKeys.g, keyStorage.getOwnSecret()) % SharedKeys.p);
             System.out.println("Ya"+Ya);
             sendMessage(new ChatMessage(ChatMessage.PUBLICKEY, Ya+""));
         }
