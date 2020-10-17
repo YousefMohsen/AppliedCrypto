@@ -77,6 +77,10 @@ public class ClientEngine extends GenericThreadedComponent
      */
     public void initialize() throws ComponentInitException
     {
+
+        this.clientNode = new Node();
+
+
         /** Get the running instance of the Configuration Manager component */
         configManager = ConfigManager.getInstance();
                 
@@ -113,23 +117,19 @@ public class ClientEngine extends GenericThreadedComponent
             display( "ExcPUBLICKEYeption creating new Input/Output Streams: " + ioe + "\n");
             ComponentManager.getInstance().fatalException(ioe);
         }
-        
+
         /** Send our username to the server... */
         try
         {
             //System.out.println("PUBLICKEY: " + clientNode.getPublickey());
             socketWriter.writeObject( configManager.getValue( "Client.Username" ) );
-
         }
         catch ( Exception ioe )
         {
             display( "Exception during login: " + ioe );
             shutdown();
             ComponentManager.getInstance().fatalException(ioe);
-        }
-
-        this.clientNode = new Node();
-        
+        }        
         super.initialize();
     }
     

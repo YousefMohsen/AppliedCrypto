@@ -5,10 +5,90 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4816afe4-4433-41ac-848a-1e8f2c2d7da4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/bcprov_jdk15on_166.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AppliedCrypto.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AppliedCrypto.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/SocketActionMessages/ChatMessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/SocketActionMessages/ChatMessage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/SocketActionMessages/class-use/ChatMessage.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/SocketActionMessages/class-use/ChatMessage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/SocketActionMessages/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/SocketActionMessages/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/SocketActionMessages/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/SocketActionMessages/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/SocketActionMessages/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/SocketActionMessages/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/allclasses-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/allpackages-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/ChatApplicationServerEngine.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/ChatApplicationServerEngine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/ComponentManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/ComponentManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/class-use/ChatApplicationServerEngine.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/class-use/ChatApplicationServerEngine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/class-use/ComponentManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/class-use/ComponentManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ChatApplicationServerPropertiesLoader.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ChatApplicationServerPropertiesLoader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/ClientEngine.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/ClientEngine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/ClientSocketGUI.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/ClientSocketGUI.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/ListenFromServer.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/ListenFromServer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/P2PClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/P2PClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/class-use/ClientEngine.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/class-use/ClientEngine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/class-use/ClientSocketGUI.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/class-use/ClientSocketGUI.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/class-use/ListenFromServer.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/class-use/ListenFromServer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/class-use/P2PClient.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/class-use/P2PClient.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ClientSocketEngine/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ConfigManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ConfigManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/SocketConnectionHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/SocketConnectionHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/SocketServerEngine.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/SocketServerEngine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/SocketServerGUI.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/SocketServerGUI.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/class-use/SocketConnectionHandler.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/class-use/SocketConnectionHandler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/class-use/SocketServerEngine.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/class-use/SocketServerEngine.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/class-use/SocketServerGUI.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/class-use/SocketServerGUI.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/ServerSocketEngine/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/base/GenericThreadedComponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/base/GenericThreadedComponent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/base/IComponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/base/IComponent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/base/class-use/GenericThreadedComponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/base/class-use/GenericThreadedComponent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/base/class-use/IComponent.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/base/class-use/IComponent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/base/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/base/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/base/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/base/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/base/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/base/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/class-use/ChatApplicationServerPropertiesLoader.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/class-use/ChatApplicationServerPropertiesLoader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/class-use/ConfigManager.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/class-use/ConfigManager.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/components/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/exception/ComponentInitException.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/exception/ComponentInitException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/exception/PropertyLoadException.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/exception/PropertyLoadException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/exception/class-use/ComponentInitException.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/exception/class-use/ComponentInitException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/exception/class-use/PropertyLoadException.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/exception/class-use/PropertyLoadException.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/exception/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/exception/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/exception/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/exception/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/exception/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/exception/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/statistics/ServerStatistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/statistics/ServerStatistics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/statistics/class-use/ServerStatistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/statistics/class-use/ServerStatistics.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/statistics/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/statistics/package-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/statistics/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/statistics/package-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/statistics/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/chatapplication_server/statistics/package-use.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/constant-values.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/deprecated-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/help-doc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-10.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-12.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-13.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-14.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index-files/index-9.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/overview-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/overview-summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/overview-tree.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/serialized-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/javadoc/system-properties.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/javadoc/system-properties.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chatapplication_server/components/ClientSocketEngine/ClientEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chatapplication_server/components/ClientSocketEngine/ClientEngine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +136,7 @@
       <workItem from="1602854505075" duration="347000" />
       <workItem from="1602856883629" duration="286000" />
       <workItem from="1602857435698" duration="26000" />
+      <workItem from="1602877246317" duration="107000" />
     </task>
     <servers />
   </component>
@@ -71,6 +152,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="424" y="213" width="1071" height="700" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1440.-877.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1602854682238" />
+    <state x="837" y="294" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1602877331333">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="837" y="294" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1440.-877.1440.877/0.23.1920.1057@0.23.1920.1057" timestamp="1602877331333" />
     <state width="1500" height="290" key="GridCell.Tab.0.bottom" timestamp="1602857301061">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
