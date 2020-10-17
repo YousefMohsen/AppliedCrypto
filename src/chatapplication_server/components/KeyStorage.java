@@ -19,6 +19,10 @@ public class KeyStorage {
          return this.sharedSecret = sharedSecret;
     }
 
+    public int calcPublicKey() {
+        return (int) (Math.pow(SharedKeys.g, ownSecret) % SharedKeys.p);
+   }
+
     public int calcSecret(int receivedKey) {
         this.sharedSecret = (int) (Math.pow(receivedKey, this.ownSecret) % SharedKeys.p);
         return this.sharedSecret;
