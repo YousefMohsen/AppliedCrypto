@@ -343,8 +343,8 @@ public class SocketServerEngine extends GenericThreadedComponent
             if ( sch.getHandleSocket().getPort() == PortNo )
                 sch.writeMsg( msg );
         }
-    }
-    
+    }    
+
     /**
      * Method for broadcasting an event/message to all connected clients
      * 
@@ -376,11 +376,12 @@ public class SocketServerEngine extends GenericThreadedComponent
             SocketServerGUI.getInstance().appendEvent("[SSEngine]:: There aren't any established client connections to the CA server (" + lotusStat.getCurrentDate() + ")\n" );
             return;
         }
-
         /** Then, for each connection handler that is occupied..print some information */
         for ( int i = 0; i < occupance.size(); i++ )
         {
             /** Get a Connection Handler reference... */
+            System.out.println("occupance"+occupance.get( i ).toString());
+
             SocketConnectionHandler sch = ( SocketConnectionHandler )occupance.get( i );
 
            sch.writeMsg( messageLf );

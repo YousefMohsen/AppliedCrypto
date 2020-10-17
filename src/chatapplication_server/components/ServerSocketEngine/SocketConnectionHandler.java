@@ -16,6 +16,7 @@ import java.io.OptionalDataException;
 import java.io.StreamCorruptedException;
 import javax.net.ssl.SSLSocket;
 import java.net.*;
+import java.util.ArrayList;
 import java.util.Vector;
 
 import chatapplication_server.components.SharedKeys;
@@ -386,7 +387,9 @@ public class SocketConnectionHandler implements Runnable {
                     case ChatMessage.PUBLICKEY:
                         int sharedSecretKeyServer = keyStorage.calcSecret(Integer.parseInt(message));
                         System.out.println("ChatMessage.PUBLICKEY!!!" + sharedSecretKeyServer);
-
+                        int publicKey = keyStorage.calcPublicKey();
+                    System.out.println("this.getHandleSocket().getPort()"+this.getHandleSocket().getPort());
+                        SocketServerEngine.getInstance().writeMsgSpecificClient( this.getHandleSocket().getPort() ,publicKey+"" );
                         
                         break;
                 }
